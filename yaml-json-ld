@@ -1,0 +1,14 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use YAML qw(LoadFile);
+use JSON::MaybeXS;
+
+my $file = $ARGV[0];
+
+my $data = LoadFile( $file );
+
+print encode_json( $data );
+

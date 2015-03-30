@@ -1,0 +1,22 @@
+"@context":
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    doap: "http://usefulinc.com/ns/doap#"
+    sympy: http://docs.sympy.org/latest/modules/
+    rc: http://umbel.org/umbel/rc/
+    implements:
+            "@id": http://example.org/Implements
+            "@type": "@id"
+"@graph":
+    -
+      "@id": https://en.wikipedia.org/wiki/Square_root
+      rdfs:sameAs: http://planetmath.org/squareroot
+    -
+      "@id": http://www.sympy.org/
+      doap:name: SymPy
+      doap:homepage: http://www.sympy.org/
+      doap:programming-language: Python
+      "@type": rc:SoftwareObject
+    - 
+      "@id": sympy:functions/elementary.html#root
+      "@type": rc:ProgramFunction
+      implements: https://en.wikipedia.org/wiki/Square_root
