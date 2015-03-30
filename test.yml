@@ -3,8 +3,8 @@
     doap: "http://usefulinc.com/ns/doap#"
     sympy: http://docs.sympy.org/latest/modules/
     rc: http://umbel.org/umbel/rc/
-    implements:
-            "@id": http://example.org/Implements
+    implementationOf:
+            "@id": http://semanticscience.org/resource/SIO_000233.rdf
             "@type": "@id"
 "@graph":
     -
@@ -19,4 +19,5 @@
     - 
       "@id": sympy:functions/elementary.html#root
       "@type": rc:ProgramFunction
-      implements: https://en.wikipedia.org/wiki/Square_root
+      rdf:partOf: http://www.sympy.org/
+      implementationOf: https://en.wikipedia.org/wiki/Square_root
