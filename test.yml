@@ -5,7 +5,7 @@
     rc: http://umbel.org/umbel/rc/
     dcterms: http://purl.org/dc/terms/
     implementationOf:
-            "@id": http://semanticscience.org/resource/SIO_000233.rdf
+            "@id": http://semanticscience.org/resource/is-implementation-of
             "@type": "@id"
 "@graph":
     -
