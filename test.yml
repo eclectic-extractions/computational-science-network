@@ -1,24 +1,41 @@
 "@context":
-    rdfs: http://www.w3.org/2000/01/rdf-schema#
-    doap: "http://usefulinc.com/ns/doap#"
-    sympy: http://docs.sympy.org/latest/modules/
-    rc: http://umbel.org/umbel/rc/
-    dcterms: http://purl.org/dc/terms/
-    implementationOf:
-            "@id": http://semanticscience.org/resource/is-implementation-of
-            "@type": "@id"
+  id: "@id"
+  type: "@type"
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  doap: http://usefulinc.com/ns/doap#
+  sympy: http://docs.sympy.org/latest/modules/
+  rc: http://umbel.org/umbel/rc/
+  dcterms: http://purl.org/dc/terms/
+  sio: http://semanticscience.org/resource/
+  latex: http://www.latex-project.org/
+  ucd: http://www.unicode.org/ns/2003/ucd/1.0
+  implementationOf:
+    "@id": http://semanticscience.org/resource/is-implementation-of
+    "@type": "@id"
+  hasImplementation:
+    "@id": http://semanticscience.org/resource/has-implementation
+    "@type": "@id"
+  represents:
+    "@id": http://semanticscience.org/resource/represents
+    "@type": "@id"
+  isRepresentedBy:
+    "@id": http://semanticscience.org/resource/is-represented-by
+    "@type": "@id"
+  example:
+    "@id": sio:example
 "@graph":
-    -
-      "@id": https://en.wikipedia.org/wiki/Square_root
-      rdfs:sameAs: http://planetmath.org/squareroot
-    -
-      "@id": http://www.sympy.org/
-      doap:name: SymPy
-      doap:homepage: http://www.sympy.org/
-      doap:programming-language: Python
-      "@type": rc:SoftwareObject
-    - 
-      "@id": sympy:functions/elementary.html#root
-      "@type": rc:ProgramFunction
-      dcterms:isPartOf: http://www.sympy.org/
-      implementationOf: https://en.wikipedia.org/wiki/Square_root
+  # projects
+  - id: http://www.sympy.org/
+    doap:name: SymPy
+    doap:homepage: http://www.sympy.org/
+    doap:programming-language: Python
+    type: rc:SoftwareObject
+  # square root
+  - id: https://en.wikipedia.org/wiki/Square_root
+    rdfs:sameAs: http://planetmath.org/squareroot
+    hasImplementation:
+      - { id: sympy:functions/elementary.html#root, type: rc:ProgramFunction, dcterms:isPartOf: http://www.sympy.org/ }
+    isRepresentedBy:
+      - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
+      - { id: ucd:221A, example: "√" }
+
