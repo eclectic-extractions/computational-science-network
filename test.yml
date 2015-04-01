@@ -3,12 +3,18 @@
   type: "@type"
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   doap: http://usefulinc.com/ns/doap#
-  sympy: http://docs.sympy.org/latest/modules/
+  sympy: http://www.sympy.org/
+  sympyModule: http://docs.sympy.org/latest/modules/
   rc: http://umbel.org/umbel/rc/
   dcterms: http://purl.org/dc/terms/
   sio: http://semanticscience.org/resource/
   latex: http://www.latex-project.org/
   ucd: http://www.unicode.org/ns/2003/ucd/1.0#
+  posix: http://pubs.opengroup.org/onlinepubs/9699919799/
+  posixFunc: http://pubs.opengroup.org/onlinepubs/9699919799/functions/
+  partOfProject:
+    "@id": dcterms:isPartOf
+    "@type": "@id"
   implementationOf:
     "@id": sio:is-implementation-of
     "@type": "@id"
@@ -25,17 +31,22 @@
     "@id": sio:example
 "@graph":
   # projects
-  - id: http://www.sympy.org/
+  - id: "sympy:"
     doap:name: SymPy
     doap:homepage: http://www.sympy.org/
     doap:programming-language: Python
     type: rc:SoftwareObject
+  - id: "posix:"
+    doap:name: [ "IEEE Std 1003.1™, 2013 Edition" ]
+    doap:homepage: http://pubs.opengroup.org/onlinepubs/9699919799/
+    doap:programming-language: C
+    type: rc:ProgramSpecification
   # square root
   - id: https://en.wikipedia.org/wiki/Square_root
     rdfs:sameAs: http://planetmath.org/squareroot
     hasImplementation:
-      - { id: sympy:functions/elementary.html#root, type: rc:ProgramFunction, dcterms:isPartOf: http://www.sympy.org/ }
+      - { id: sympyModule:functions/elementary.html#root, type: rc:ProgramFunction, partOfProject: "sympy:" }
+      - { id: posixFunc:sqrt.html, type: "rc:ProgramFunction", partOfProject: "posix:"  }
     isRepresentedBy:
       - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
       - { id: ucd:221A, example: "√" }
-
