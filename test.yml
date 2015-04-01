@@ -8,7 +8,7 @@
   dcterms: http://purl.org/dc/terms/
   sio: http://semanticscience.org/resource/
   latex: http://www.latex-project.org/
-  ucd: http://www.unicode.org/ns/2003/ucd/1.0
+  ucd: http://www.unicode.org/ns/2003/ucd/1.0#
   implementationOf:
     "@id": sio:is-implementation-of
     "@type": "@id"
