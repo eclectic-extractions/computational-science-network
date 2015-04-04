@@ -3,6 +3,8 @@
   type: "@type"
   rdfs: http://www.w3.org/2000/01/rdf-schema#
   doap: http://usefulinc.com/ns/doap#
+  wolfram-lang: http://reference.wolfram.com/language/
+  wolfram-lang-ref: http://reference.wolfram.com/language/ref/
   sympy: http://www.sympy.org/
   sympyModule: http://docs.sympy.org/latest/modules/
   rc: http://umbel.org/umbel/rc/
@@ -42,6 +44,10 @@
     doap:name: MATLAB
     doap:homepage: http://www.mathworks.com/products/matlab/
     type: rc:SoftwareObject
+  - id: "wolfram-lang:"
+    doap:name: Wolfram Language
+    doap:homepage: "wolfram-lang:"
+    type: rc:SoftwareObject
   - id: "posix:"
     doap:name: [ "IEEE Std 1003.1™, 2013 Edition" ]
     doap:homepage: http://pubs.opengroup.org/onlinepubs/9699919799/
@@ -54,6 +60,7 @@
       - { id: sympyModule:functions/elementary.html#root, type: rc:ProgramFunction, partOfProject: "sympy:" }
       - { id: posixFunc:sqrt.html, type: "rc:ProgramFunction", partOfProject: "posix:"  }
       - { id: matlab-ref:sqrt.html, type: "rc:ProgramFunction", partOfProject: "matlab:"  }
+      - { id: wolfram-lang-ref:Sqrt.html, type: "rc:ProgramFunction", partOfProject: "wolfram-lang:" }
     isRepresentedBy:
       - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
       - { id: ucd:221A, example: "√" }
