@@ -12,6 +12,8 @@
   ucd: http://www.unicode.org/ns/2003/ucd/1.0#
   posix: http://pubs.opengroup.org/onlinepubs/9699919799/
   posixFunc: http://pubs.opengroup.org/onlinepubs/9699919799/functions/
+  matlab: http://www.mathworks.com/products/matlab/
+  matlab-ref: http://www.mathworks.com/help/matlab/ref/
   partOfProject:
     "@id": dcterms:isPartOf
     "@type": "@id"
@@ -36,6 +38,10 @@
     doap:homepage: http://www.sympy.org/
     doap:programming-language: Python
     type: rc:SoftwareObject
+  - id: "matlab:"
+    doap:name: MATLAB
+    doap:homepage: http://www.mathworks.com/products/matlab/
+    type: rc:SoftwareObject
   - id: "posix:"
     doap:name: [ "IEEE Std 1003.1™, 2013 Edition" ]
     doap:homepage: http://pubs.opengroup.org/onlinepubs/9699919799/
@@ -47,6 +53,7 @@
     hasImplementation:
       - { id: sympyModule:functions/elementary.html#root, type: rc:ProgramFunction, partOfProject: "sympy:" }
       - { id: posixFunc:sqrt.html, type: "rc:ProgramFunction", partOfProject: "posix:"  }
+      - { id: matlab-ref:sqrt.html, type: "rc:ProgramFunction", partOfProject: "matlab:"  }
     isRepresentedBy:
       - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
       - { id: ucd:221A, example: "√" }
