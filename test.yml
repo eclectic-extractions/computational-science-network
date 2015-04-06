@@ -7,6 +7,8 @@
   wolfram-lang-ref: http://reference.wolfram.com/language/ref/
   yorick-lang: http://yorick.sourceforge.net/
   yorick-lang-doc: http://dhmunro.github.io/yorick-doc/
+  numpy: http://www.numpy.org/
+  numpy-doc: http://docs.scipy.org/doc/numpy/reference/generated/
   sympy: http://www.sympy.org/
   sympyModule: http://docs.sympy.org/latest/modules/
   rc: http://umbel.org/umbel/rc/
@@ -42,6 +44,11 @@
     doap:homepage: http://www.sympy.org/
     doap:programming-language: Python
     type: rc:SoftwareObject
+  - id: "numpy:"
+    doap:name: NumPy
+    doap:homepage: "numpy:"
+    doap:programming-language: Python
+    type: rc:SoftwareObject
   - id: "matlab:"
     doap:name: MATLAB
     doap:homepage: http://www.mathworks.com/products/matlab/
@@ -68,6 +75,7 @@
       - { id: matlab-ref:sqrt.html, type: "rc:ProgramFunction", partOfProject: "matlab:"  }
       - { id: wolfram-lang-ref:Sqrt.html, type: "rc:ProgramFunction", partOfProject: "wolfram-lang:" }
       - { id: yorick-lang-ref:stdlib/std-math.html#sqrt, type: "rc:ProgramFunction", partOfProject: "yorick-lang:" }
+      - { id: numpy:numpy.sqrt.html, type: "rc:ProgramFunction", partOfProject: "numpy:" }
     isRepresentedBy:
       - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
       - { id: ucd:221A, example: "√" }
