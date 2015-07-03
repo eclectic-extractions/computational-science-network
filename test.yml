@@ -79,3 +79,5 @@
     isRepresentedBy:
       - { id: latex:base/sqrt, url: "http://svn.gna.org/viewcvs/*checkout*/latexrefman/trunk/latex2e.html#index-_005csqrt_005broot_005d_007barg_007d", example: [ "\sqrt{n}", "\sqrt[2]{n}" ] }
       - { id: ucd:221A, example: "√" }
+  - id: https://en.wikipedia.org/wiki/Logarithm
+    rdfs:sameAs: http://planetmath.org/logarithm
