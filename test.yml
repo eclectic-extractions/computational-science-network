@@ -46,7 +46,7 @@
     type: rc:SoftwareObject
   - id: "numpy:"
     doap:name: NumPy
-    doap:homepage: "numpy:"
+    doap:homepage: http://www.numpy.org/
     doap:programming-language: Python
     type: rc:SoftwareObject
   - id: "matlab:"
@@ -55,11 +55,11 @@
     type: rc:SoftwareObject
   - id: "wolfram-lang:"
     doap:name: Wolfram Language
-    doap:homepage: "wolfram-lang:"
+    doap:homepage: http://reference.wolfram.com/language/
     type: rc:SoftwareObject
   - id: "yorick-lang"
     doap:name: Yorick
-    doap:homepage: "yorick-lang-doc:"
+    doap:homepage: http://dhmunro.github.io/yorick-doc/
     type: rc:SoftwareObject
   - id: "posix:"
     doap:name: [ "IEEE Std 1003.1™, 2013 Edition" ]
