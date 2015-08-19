@@ -84,3 +84,4 @@
     rdfs:sameAs: http://planetmath.org/logarithm
     hasImplementation:
       - { id: sympyModule:functions/elementary.html#log, type: rc:ProgramFunction, partOfProject: "sympy:" }
+      - { id: posixFunc:log.html, type: "rc:ProgramFunction", partOfProject: "posix:"  }
