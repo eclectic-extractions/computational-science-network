@@ -87,3 +87,4 @@
       - { id: posixFunc:log.html, type: "rc:ProgramFunction", partOfProject: "posix:"  }
       - { id: matlab-ref:log.html, type: "rc:ProgramFunction", partOfProject: "matlab:"  }
       - { id: wolfram-lang-ref:Log.html, type: "rc:ProgramFunction", partOfProject: "wolfram-lang:" }
+      - { id: yorick-lang-ref:stdlib/std-math.html#log, type: "rc:ProgramFunction", partOfProject: "yorick-lang:" }
