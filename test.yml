@@ -91,3 +91,4 @@
       - { id: numpy:numpy.log.html, type: "rc:ProgramFunction", partOfProject: "numpy:" }
   # exponentiation
   - id: https://en.wikipedia.org/wiki/Exponentiation
+    rdfs:sameAs: http://planetmath.org/exponentiation
