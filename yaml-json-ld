@@ -5,10 +5,20 @@ use warnings;
 
 use YAML qw(LoadFile);
 use JSON::MaybeXS;
+use Inline Python => <<'EOF';
+from pyld import jsonld
+
+expand = jsonld.expand
+compact = jsonld.compact
+EOF
 
 my $file = $ARGV[0];
 
 my $data = LoadFile( $file );
 
-print encode_json( $data );
+#use DDP; p $data;#DEBUG
+my @f = expand($data);
+use DDP; p @f;
+
+#print encode_json( $data );#DEBUG
 
